@@ -1,0 +1,75 @@
+@import "../styles/common.scss";
+
+.skills {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        margin: 2rem;
+        font-size: $title_font_size;
+
+        @include small {
+            font-size: $title_font_size_small;
+        }
+
+        @include smallest {
+            font-size: $title_font_size_smallest;
+        }
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        flex-flow: row wrap;
+
+        .card {
+            margin: 1rem;
+            padding: 0;
+            border-radius: 5%;
+            background-color: #ffffff80;
+            border: 1px solid #00000080;
+            box-shadow: 0px 0px 20px -8px whitesmoke;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 500ms ease;
+            flex: 0 1 calc(20% - 8px);
+
+            @include large {
+                flex: 0 0 calc(30% - 25px);
+            }
+
+            @include small {
+                flex: 0 0 calc(45% - 20px);
+            }
+
+            p {
+                position: relative;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .image {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 25%;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                h3 {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

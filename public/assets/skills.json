@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Android",
+        "image": "/android.svg"
+    },
+    {
+        "name": "Java",
+        "image": "/java.svg"
+    },
+    {
+        "name": "Kotlin",
+        "image": "/kotlin.svg"
+    },
+    {
+        "name": "Node",
+        "image": "/nodejs.svg"
+    },
+    {
+        "name": "Express",
+        "image": "/expressjs.svg"
+    },
+    {
+        "name": "Next",
+        "image": "/nestjs.svg"
+    }
+]

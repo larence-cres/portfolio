@@ -1,0 +1,251 @@
+@import "../styles/common.scss";
+
+.contactMe {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background-image: url("https://swall.teahub.io/photos/small/88-882554_matrix-code-world-map.jpg");
+    // background-size: cover;
+    // margin: 1.5em;
+    // padding-right: 1.5em;
+    // margin-block-start: 1em;
+    // margin-block-end: 1em;
+
+    // h1{
+    //     text-shadow: 0px 1px 5px rgba(255, 255, 255, 0.7);
+    // }
+
+    h1 {
+        margin: 2rem;
+        font-size: $title_font_size;
+
+        @include small {
+            font-size: $title_font_size_small;
+        }
+
+        @include smallest {
+            font-size: $title_font_size_smallest;
+        }
+    }
+
+    p {
+        font-size: $description_font_size;
+        margin: auto;
+        width: 90%;
+
+        @include small {
+            font-size: $description_font_size_small;
+        }
+
+        @include smallest {
+            font-size: $description_font_size_smallest;
+        }
+    }
+
+    .success_snackbar {
+        background-color: green;
+    }
+
+    .error_snackbar {
+        background-color: red;
+    }
+
+    .container {
+        display: flex;
+        width: 90%;
+        // background-color: rebeccapurple;
+        margin: 2rem 0;
+        padding: 1rem 0;
+        backdrop-filter: blur(20px);
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        -webkit-box-shadow: 0px 10px 33px 0px rgba(255, 255, 255, 0.1);
+        -moz-box-shadow: 0px 10px 33px 0px rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 10px 33px 0px rgba(255, 255, 255, 0.1);
+
+        @include medium {
+            flex-direction: column-reverse;
+        }
+
+        .info {
+            flex: 0.35;
+            // background-color: $primaryGradient;
+            margin: 2.5em;
+            padding: 0 1rem;
+            border-radius: 15px;
+            transition: all 1s ease-in-out;
+
+            a:hover {
+                color: $secondaryColor;
+            }
+
+            .iconText {
+                display: flex;
+                justify-content: flex-start;
+                margin: 2rem 0;
+                align-items: center;
+
+                .icon {
+                    font-size: 1.8em;
+                    margin-right: 1.2rem;
+                }
+                span {
+                    font-size: 1.3rem;
+                    font-weight: 300;
+                }
+
+                @include medium {
+                    justify-content: center;
+                    align-items: center;
+
+                    .icon {
+                        font-size: 1rem;
+                    }
+                    span {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 2rem;
+                font-weight: 500;
+                top: 0;
+            }
+
+            @include medium {
+                h3 {
+                    font-size: 1.2rem;
+                }
+            }
+
+            // .image {
+            //     width: 100%;
+            //     height: 100%;
+            //     display: flex;
+            //     object-fit: contain;
+            //     align-items: center;
+            //     justify-content: center;
+            //     transition: all 500ms ease;
+
+            //     @include large {
+            //         margin: 0;
+            //         padding: 0;
+            //         width: 100%;
+            //         height: 100%;
+            //     }
+            // }
+        }
+
+        .formContainer {
+            flex: 0.65;
+            display: flex;
+            margin: 0 1.5em;
+            flex-direction: column;
+            align-items: center;
+            // padding-right: 1.5em;
+            justify-content: center;
+
+            .form {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                margin: 1rem;
+                margin-block-start: 1rem;
+                margin-block-end: 1rem;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all 1s ease-in-out;
+
+                .col {
+                    display: flex;
+                    width: 100%;
+
+                    > * {
+                        flex: 0.5;
+                        margin: 0.5rem;
+                    }
+
+                    @include small {
+                        flex-direction: column;
+                    }
+                }
+
+                .formGroup {
+                    width: 100%;
+                    padding: 0.5rem;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    height: 40px;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border: none;
+                    font-size: 1rem;
+                    padding: 0 0.3rem;
+                    margin: 0.3rem 0;
+                    cursor: text;
+                    color: white;
+                    transition: all 500ms ease-in-out;
+                    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+                    &:focus {
+                        outline: none;
+                        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+                    }
+                }
+
+                textarea {
+                    height: 200px;
+                }
+
+                .error {
+                    color: red;
+                    margin: 0;
+                }
+
+                button {
+                    width: 12rem;
+                    height: 50px;
+                    color: white;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border: 1px solid $secondaryColor;
+                    align-self: flex-end;
+                    margin: 0 0.5rem;
+                    font-size: 1rem;
+                    border-radius: 5px;
+                    font-weight: 50;
+                    cursor: pointer;
+                    transition: all 300ms ease;
+
+                    &:focus,
+                    &:hover {
+                        background-color: $secondaryColor;
+                        transform: scale(1.05);
+                    }
+                }
+
+                .submitting {
+                    color: white;
+                    background-color: grey;
+                    border: none;
+                    cursor: default;
+
+                    &:focus,
+                    &:hover {
+                        background-color: grey;
+                    }
+                }
+
+                span {
+                    color: green;
+                }
+            }
+        }
+    }
+}

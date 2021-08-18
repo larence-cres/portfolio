@@ -1,0 +1,80 @@
+$primaryColor: rgba(2, 0, 36, 1) 0%;
+$secondaryColor: #e29e37;
+$primaryGradient: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(40, 1, 5, 1) 80%, rgba(68, 7, 7, 1) 100%);
+$whiteGradientStart: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.8) 100%);
+$whiteGradientEnd: linear-gradient(-90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.8) 100%);
+
+$brown_tint_80: #7e676780;
+$white_80: #ffffff80;
+$black_80: #00000080;
+
+$smallest_width: 380px;
+$small_width: 600px;
+$medium_width: 900px;
+$large_width: 1100px;
+$larger_width: 1300px;
+
+@mixin smallest {
+  @media screen and (max-width: #{$smallest_width}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: #{$small_width}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: #{$medium_width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (max-width: #{$large_width}) {
+    @content;
+  }
+}
+
+@mixin larger {
+  @media screen and (max-width: #{$larger_width}) {
+    @content;
+  }
+}
+
+// Normal size
+$header_font_size: 5rem;
+$title_font_size: 3rem;
+$sub_title_font_size: 2rem;
+$description_font_size: 1.5rem;
+
+$item_title_font_size: 1.3rem;
+$item_sub_title_font_size: 1.1rem;
+$item_description_font_size: 0.9rem;
+
+// Medium size
+$item_title_font_size_medium: 1.2rem;
+$item_sub_title_font_size_medium: 1rem;
+$item_description_font_size_medium: 0.8rem;
+
+// Small size
+$header_font_size_small: 3rem;
+$title_font_size_small: 2rem;
+$sub_title_font_size_small: 1.6rem;
+$description_font_size_small: 1rem;
+
+$item_title_font_size_small: 0.8rem;
+$item_sub_title_font_size_small: 0.7rem;
+$item_description_font_size_small: 0.5rem;
+
+// Smallest size
+$header_font_size_smallest: 2rem;
+$title_font_size_smallest: 1.8rem;
+$sub_title_font_size_smallest: 1.5rem;
+$description_font_size_smallest: 0.8rem;
+
+$item_title_font_size_smallest: 0.6rem;
+$item_sub_title_font_size_smallest: 0.5rem;
+$item_description_font_size_smallest: 0.4rem;

@@ -1,0 +1,29 @@
+@import "../styles/common.scss";
+
+.container {
+  width: 100vw;
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(40, 1, 5, 1) 80%, rgba(68, 7, 7, 1) 100%);
+
+  .sections {
+    min-height: 100%;
+    width: calc(100vw - 150px);
+    position: relative;
+    left: 150px;
+    overflow-y: scroll;
+
+    @include larger {
+      width: 100vw;
+      left: 0;
+    }
+
+    > * {
+      min-height: 100vh;
+      width: calc(100vw - 150px);
+
+      @include larger {
+        width: 100vw;
+        left: 0;
+      }
+    }
+  }
+}

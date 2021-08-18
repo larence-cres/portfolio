@@ -1,0 +1,151 @@
+@import "../styles/common.scss";
+
+.projects {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        margin: 2rem;
+        font-size: $title_font_size;
+
+        @include small {
+            font-size: $title_font_size_small;
+        }
+
+        @include smallest {
+            font-size: $title_font_size_smallest;
+        }
+    }
+
+    .githubContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include medium {
+            flex-direction: column;
+        }
+
+        .githubItems {
+            width: 45%;
+            height: 120px;
+            margin: 0.6rem;
+            padding: 1rem;
+            background-color: #00000020;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 500ms ease;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            h3 {
+                margin: 0;
+                font-size: $item_title_font_size;
+                color: #e29e37;
+            }
+
+            .description {
+                margin: 0.5rem 0;
+                font-size: $item_description_font_size;
+            }
+
+            .language {
+                margin: 0.7rem 0;
+                font-size: $item_sub_title_font_size;
+            }
+
+            &:hover {
+                border: 1px solid #e29e37;
+                h3 {
+                    font-weight: 900;
+                }
+            }
+
+            @include medium {
+                width: 90%;
+            }
+
+            @include small {
+                h3 {
+                    font-size: $item_sub_title_font_size_medium;
+                }
+
+                p {
+                    font-size: $item_sub_title_font_size_small;
+                }
+
+                span {
+                    font-size: $item_description_font_size_small;
+                }
+            }
+        }
+    }
+
+    .otherProjectsContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        flex-flow: row wrap;
+
+        .otherProjectsItems {
+            margin: 1rem;
+            padding: auto;
+            border-radius: 25%;
+            background-color: $white_80;
+            border: 1px solid #00000080;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex: 0 1 calc(11% - 8px);
+
+            @include small {
+                flex: 0 0 calc(30% - 20px);
+            }
+
+            h3 {
+                position: absolute;
+                font-size: $item_title_font_size;
+                visibility: hidden;
+                text-align: center;
+
+                @include medium {
+                    font-size: $item_title_font_size_medium;
+                }
+
+                @include small {
+                    font-size: $item_title_font_size_small;
+                }
+            }
+
+            .image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 25%;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                transition: all 500ms ease;
+                background-color: $secondaryColor;
+                .image {
+                    opacity: 0.2;
+                }
+                h3 {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
